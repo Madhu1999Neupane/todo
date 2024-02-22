@@ -1,0 +1,23 @@
+{% block content %}
+<h1>Add Task</h1>
+<form method = "POST">
+    {% csrf_token %}
+    {% for field in form %}
+    <div>
+        <label for="name">{{ field.label_tag  }} : </label>
+        {{ field }}
+    </div>
+    {% endfor %}
+    <button type="submit">submit</button>
+    </form>
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}
